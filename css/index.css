@@ -73,3 +73,10 @@
      right: 100%;
     }
 }
+
+.score {
+    font-size: 35px;
+    margin-right:0;
+    color: rgb(168, 146, 21);
+    position: absolute;
+}

@@ -1,5 +1,14 @@
 const marioElement = document.querySelector('.mario');
 const pipeElement = document.querySelector('.pipe');
+const scoreElement = document.getElementById('score');
+
+let state = 0
+scoreElement.innerHTML=state;
+
+const addScore = () => {
+    state = state +1;
+    scoreElement.innerHTML=state;
+}
 
 
 const jump = () => {
@@ -30,8 +39,12 @@ const loop = setInterval(() => {
         marioElement.style.marginLeft = '50px';
 
         clearInterval(loop);
-    } 
+    } else {
+        console.log('[STATE]:', state);
+        addScore();
+    }
 
 }, 10)
+
 
 document.addEventListener('keypress', jump);
