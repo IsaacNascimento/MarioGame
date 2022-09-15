@@ -21,7 +21,7 @@ const jump = () => {
 
 const loop = setInterval(() => {
 
-    console.log(loop);
+    //console.log(loop);
    
     const pipePostion = pipeElement.offsetLeft;
     const marioPosition = +window.getComputedStyle(marioElement).bottom.replace('px', '');
@@ -40,11 +40,12 @@ const loop = setInterval(() => {
 
         clearInterval(loop);
     } else {
-        console.log('[STATE]:', state);
+        //console.log('[STATE]:', state);
         addScore();
     }
 
 }, 10)
 
 
-document.addEventListener('keypress', jump);
+//document.addEventListener('keypress', jump);
+document.addEventListener('pointerDown', jump);
